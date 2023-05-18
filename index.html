@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Uroanálisis</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./estilos3.css">
+</head>
+<body>
+    <div class="container">
+      <h1 class="uroTitulo">Uroanálisis</h1>
+      <h2>Por favor ingrese los siguientes datos:</h2>
+      <form id="myForm" method="post" action="/">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="nombre" class="form-label">Nombre completo:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo"
+              required>
+          </div>
+          <div class="col-md-4">
+            <label for="edad" class="form-label">Edad (Seleccione el rango):</label>
+            <select class="form-select" id="edad" name="edad" required>
+              <option value="rango1">18 a 38 años</option>
+              <option value="rango2">39 a 58 años</option>
+              <option value="rango3">Mayor de 58 años</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="sexo" class="form-label">Sexo:</label>
+            <select class="form-select" id="sexo" name="sexo" required>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <h2>Análisis Macroscópico:</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="color" class="form-label">Color:</label>
+            <select class="form-select" id="color" name="color" required>
+              <option value="no_color">No color</option>
+              <option value="paja_palida">Paja pálida</option>
+              <option value="amarillo_transparente">Amarillo transparente</option>
+              <option value="amarillo_oscuro">Amarillo oscuro</option>
+              <option value="ambar">Ámbar</option>
+              <option value="rojo">Rojo</option>
+              <option value="naranja">Naranja</option>
+              <option value="azul">Azul</option>
+              <option value="verde">Verde</option>
+              <option value="morado">Morado</option>
+              <option value="espuma">Espuma</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="aspecto" class="form-label">Aspecto:</label>
+            <select class="form-select" id="aspecto" name="aspecto" required>
+              <option value="claro">Clara</option>
+              <option value="turbio">Turbia</option>
+              <option value="oscuro">Oscura</option>
+            </select>
+          </div>
+          <br>
+          <h2>Análisis Químico:</h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label for="pH" class="form-label"
+                title="El pH de la orina es una medida de la acidez o alcalinidad de la orina, que se determina por la cantidad de iones de hidrógeno que contiene.">Valor
+                de pH:</label>
+              <input type="text" class="form-control" id="pH" name="ph" placeholder="Ingresa el valor del pH" required
+                step="0.01">
+            </div>
+            <div class="col-md-4">
+              <label for="leucoesterasa" class="form-label"
+                title="La leucoesterasa es una enzima que se encuentra en los glóbulos blancos de la orina y su presencia se puede utilizar como una señal de infección urinaria.">Valor
+                de
+                Leucoesterasa:</label>
+              <select class="form-select" id="leuco" name="leucoesterasa" required>
+                <option value="negativo">Negativo</option>
+                <option value="trazas">Trazas</option>
+                <option value="positivo">Positivo</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="blood" class="form-label"
+                title="Este es un indicativo basico de la presencia de orina en la sangre.">Presencia de sangre</label>
+              <select class="form-select" id="sangree" name="sangre" required>
+                <option value="possangre">Sí</option>
+                <option value="negsangre">No</option>
+              </select>
+            </div>
+          </div>
+          <h2>Análisis Microscópico:</h2>
+          <div class="row g-2">
+            <div class="col-md-3">
+              <label for="leucos" class="form-label"
+                title="Su presencia en la orina puede indicar una infección urinaria, cistitis, uretritis, prostatitis o una enfermedad renal. ">Valor
+                de Leucocitos:</label>
+              <input type="number" class="form-control" id="leucocitoss" name="leucocito"
+                placeholder="Ingresa el valor de Leucocitos" required>
+            </div>
+            <div class="col-md-3">
+              <label for="density" class="form-label"
+                title="La medición de la densidad de la orina es importante porque puede proporcionar información valiosa sobre la función renal y la hidratación del cuerpo.">Valor
+                de Densidad:</label>
+              <input type="number" class="form-control" id="density" name="densidad"
+                placeholder="Ingresa el valor correspondiente a densidad" step="0.01" required>
+            </div>
+            <div class="col-md-3">
+              <label for="germen" class="form-label"
+                title="La detección de gérmenes en la orina es importante porque puede indicar una infección del tracto urinario (ITU). Las ITUs son causadas por bacterias que se han introducido en el tracto urinario y pueden afectar a diferentes partes del mismo, como la vejiga, la uretra o los riñones. ">Valor
+                de Gérmenes:</label>
+              <input type="number" class="form-control" id="germeness" name="germenes"
+                placeholder="Ingresa el valor correspondiente a cantidad de gérmenes" required step="0.01" required>
+            </div>
+            <div class="col-md-3">
+              <label for="creatinina" class="form-label"
+                title="La creatinina es un producto de desecho que se produce en los músculos y se elimina a través de los riñones. La medición de la creatinina en la orina es importante porque puede indicar cómo están funcionando los riñones.">Valor
+                de
+                creatinina:</label>
+              <input type="number" class="form-control" id="creatininaa" name="creatinina"
+                placeholder="Ingresa el valor de creatinina" step="0.01" required>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button" id="back2">Regresar</button>
+            <button type="submit" class="btn btn-success" type="button" id="myButton">
+              Enviar Formulario
+            </button>
+  
+          </div>
+      </form>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+      <script src="./cod3.js"></script>
+      <script src="./loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+body {
+    background-image: url('./img/medicalPig.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .btn-success:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .uroTitulo {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0.1em;
+    margin-bottom: 1em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+  }
+  
+  input:hover {
+    background-color: lightgray;
+    transition: background-color 0.5s ease;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
